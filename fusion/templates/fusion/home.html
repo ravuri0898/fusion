@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block body %}
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
     {% block navBar %}
         {% include 'fusion/navbar.html' %}
 
@@ -21,31 +22,6 @@
                 {% comment %}ROW #1 starts here!{% endcomment %}
                 <div class="row">
                     {% comment %}The Employee Image Card starts here!{% endcomment %}
-                    {% comment %}<div class="ui large fluid raised card"
-                         style="min-width: 240px;
-                            max-width: 320px;">
-
-                        <div class="image">
-                            <img src="{% static 'fusion/img/faculty.png' %}">
-                        </div>
-
-                        <div class="content">
-                            http://web.iiitdmj.ac.in/~vkjain
-                            <div class="ui large header" href="">
-                                {{ userFirstName }}
-                                {{ userLastName }}
-                                <span class="right floated meta">
-                                {{ userDepartment.upper }}
-                            </span>
-                            </div>
-
-                            <div class="meta">
-                            <span>
-                                {{ userDesignation }}
-                            </span>
-                            </div>
-                        </div>
-                    </div>{% endcomment %}
                     {% block userCard %}
                         {% include 'fusion/usercard.html' %}
                     {% endblock %}
@@ -589,7 +565,8 @@
             {% comment %}The right-rail segment starts here!{% endcomment %}
             <div class="three wide column">
                 <div class="ui row">
-                    <div class="ui text segment"
+                    <div id="textSegmentDiv"
+                         class="ui text segment"
                          style="height: auto;
                             min-height: 15vh;">
                         <div class="ui active large text loader"
@@ -598,7 +575,7 @@
                         </div>
 
                         <span class="ui header" id="textLoader">
-                        One new Replacement Requests!
+                        One new Replacement Request!
                     </span>
 
                     </div>
@@ -638,7 +615,7 @@
         $(document).ready(function(){
             $("#textLoader").toggle();
             $("#replacement-card").toggle();
-            setTimeout(loader, 1200);
+            setTimeout(loader, 1500);
         });
 
         function loader() {
@@ -689,6 +666,21 @@
                     }]
                 }
             }
+        });
+    </script>
+
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
+    <script>
+        // Script for the Date Picker!
+
+        $('#rangestart').calendar({
+            type: 'date',
+            endCalendar: $('#rangeend')
+        });
+        $('#rangeend').calendar({
+            type: 'date',
+            startCalendar: $('#rangestart')
         });
     </script>
 {% endblock %}
