@@ -13,6 +13,12 @@ urlpatterns = [
     # fusion/leave/<pk>/
     url(r'^leave/(?P<emp_id>[0-9]+)$', views.leave, name='leave'),
 
+    # fusion/visitorhostel/<pk>/
+    url(r'^visitorhostel/(?P<emp_id>[0-9]+)$', views.visitorhostel, name='visitorhostel'),
+
+    # fusion/placement/<pk>/
+    url(r'^placement/(?P<emp_id>[0-9]+)$', views.placement, name='placement'),
+
     # fusion/profile/<pk>/
     url(r'^profile/(?P<emp_id>[0-9]+)$', views.profile, name='profile'),
 

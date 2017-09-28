@@ -46,11 +46,7 @@ def profile(request, emp_id):
     userDepartment = str(dbUser.empDepartment)
     userDesignation = str(dbUser.empDesignation)
 
-    leave_type = ['Casual Leave', 'Commuted Leave', 'Earned Leave', 'Restricted Holiday', 'Sp. Casual Leave',
-                  'Vacation Leave']
-
-    context = {'leave_type': leave_type,
-               'employeePK': employeePK,
+    context = {'employeePK': employeePK,
                'userFirstName': userFirstName,
                'userLastName': userLastName,
                'userEmail': userEmail,
@@ -118,6 +114,48 @@ def login(request):
     else:
         context = {'loginform': loginform}
         return render(request, 'fusion/general/login.html', context)
+
+
+def visitorhostel(request, emp_id):
+    employeePK = emp_id
+    dbUser = get_object_or_404(Employee, pk=employeePK)
+    userFirstName = str(dbUser.empFirstName)
+    userLastName = str(dbUser.empLastName)
+    userEmail = str(dbUser.empEmail)
+    userDepartment = str(dbUser.empDepartment)
+    userDesignation = str(dbUser.empDesignation)
+
+    context = {'employeePK': employeePK,
+               'userFirstName': userFirstName,
+               'userLastName': userLastName,
+               'userEmail': userEmail,
+               'userDesignation': userDesignation,
+               'userDepartment': userDepartment,
+               'loginform': loginform,
+               }
+
+    return render(request, 'fusion/vhModule/visitorhostel.html', context)
+
+
+def placement(request, emp_id):
+    employeePK = emp_id
+    dbUser = get_object_or_404(Employee, pk=employeePK)
+    userFirstName = str(dbUser.empFirstName)
+    userLastName = str(dbUser.empLastName)
+    userEmail = str(dbUser.empEmail)
+    userDepartment = str(dbUser.empDepartment)
+    userDesignation = str(dbUser.empDesignation)
+
+    context = {'employeePK': employeePK,
+               'userFirstName': userFirstName,
+               'userLastName': userLastName,
+               'userEmail': userEmail,
+               'userDesignation': userDesignation,
+               'userDepartment': userDepartment,
+               'loginform': loginform,
+               }
+
+    return render(request, 'fusion/placementModule/placement.html', context)
 
 
 def temp(request):
