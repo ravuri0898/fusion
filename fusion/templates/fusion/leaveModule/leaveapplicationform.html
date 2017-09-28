@@ -1,86 +1,22 @@
 <div class="ui container">
     <div class="ui vertical stripe team segment"
-         style="padding-left: 5%;
-                padding-right: 5%;">
+         style="padding-left: 3.5%;
+                padding-right: 3.5%;">
+
         <div class="ui header">
-            <span>
-                Please Checkout Your Personal Details:
-            </span>
+            Leave Application Form:
         </div>
 
         <div class="ui divider"></div>
         <br>
 
-        <form class="ui large form"
-              style="margin-left: 7.5%;
-                     margin-right: 7.5%;">
-
-            {% comment %}
-                TODO: Remove hard coded text from here!
-            {% endcomment %}
-
-            <div class="two fields">
-                <div class="field">
-                    <label>Name</label>
-                    <input placeholder="name" value="Dr. Atul Gupta" readonly="" type="text">
-                </div>
-
-                <div class="field">
-                    <label>Designation</label>
-                    <input placeholder="designation" value="Associate Professor" readonly="" type="text">
-                </div>
-            </div>
-
-            <div class="two fields">
-                <div class="twelve wide field">
-                    <label>Email</label>
-                    <input placeholder="email" value="atulgupta@iiitdmj.ac.in" readonly="" type="text">
-                </div>
-
-                <div class="four wide field">
-                    <label>Department</label>
-                    <input placeholder="department" value="CSE" readonly="" type="text">
-                </div>
-
-            </div>
-
-        </form>
-        <br>
-
-        <div class="ui header">
-            <span>
-                Leave Details:
-            </span>
-        </div>
-
-        <div class="ui divider"></div>
-        <br>
-
-        {% comment %}
-        <div class="ui sub dividing header"
-             style="margin-left: 7.5%;
-                 margin-right: 7.5%;
-                 margin-bottom: 2.5%;">
-
-            Apply for Leave:
-
-            <button class="ui large icon button circular right floated" style="background-color: #FFF;"
-                    onclick="addLeave()">
-                <i class="plus large green icon right floated"></i>
-            </button>
-
-        </div>
-{% endcomment %}
-        <form class="ui large form"
-              style="margin-left: 7.5%;
-                 margin-right: 7.5%;
-                 margin-bottom: 5%;">
+        <form class="ui large form">
 
             {% comment %} The ApplyLeave conatianer starts here! {% endcomment %}
             <div id="applyLeave">
                 {% comment %}The form row starts here!{% endcomment %}
-                <div class="fields">
-                    <div class="four wide field">
+                <div class="two fields">
+                    <div class="field">
                         <label>Leave From:</label>
                         <div class="ui calendar" id="rangestart">
                             <div class="ui input left icon">
@@ -90,7 +26,7 @@
                         </div>
                     </div>
 
-                    <div class="four wide field">
+                    <div class="field">
                         <label>Leave To:</label>
                         <div class="ui calendar" id="rangeend">
                             <div class="ui input left icon">
@@ -99,8 +35,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="six wide field">
+                <div class="two fields">
+                    <div class="twelve wide field">
                         {% comment %}The Dropdown field starts here!{% endcomment %}
                         <label>Leave Type</label>
 
@@ -139,7 +77,7 @@
                         {% comment %}The Dropdown field ends here!{% endcomment %}
                     </div>
 
-                    <div class="field">
+                    <div class="four wide field">
                         <label>Station Leave:</label>
                         <div class="ui toggle checkbox"
                              style="margin-top: 8px;">
@@ -149,20 +87,13 @@
                     </div>
 
                 </div>
-                {% comment %}The form row ends here!{% endcomment %}
 
-                <div id="leaveAddress" style="display: none;">
-                    <label>Leave Address:</label>
-                    <textarea class="ui textarea" rows="2"></textarea>
+                <div class="fields">
+                    <div class="sixteen wide field" id="leaveAddress" style="display: none;">
+                        <label>Leave Address:</label>
+                        <textarea class="ui textarea" rows="2"></textarea>
+                    </div>
                 </div>
-
-                {% comment %}The Resposibilities start here!{% endcomment %}
-{% comment %}
-                <div class="ui sub dividing header">
-                    Assign Responsibilities:
-                </div>
-{% endcomment %}
-                <br>
 
                 <div>
                     <div class="fields">
@@ -248,9 +179,88 @@
                     </div>
                 </div>
                 {% comment %}Leave Purpose ends here!{% endcomment %}
+                <br>
             </div>
         </form>
     </div>
+
+    <div class="extra content">
+        <br>
+        <br>
+
+        <div class="ui six equal width blue small stackable statistics"
+             style="margin: auto;">
+
+            <div class="ui statistic">
+                <div class="value">
+                    8
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    CL&ensp;
+                </div>
+            </div>
+
+            <div class="ui statistic">
+                <div class="value">
+                    20
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    COL&ensp;
+                </div>
+            </div>
+
+            <div class="ui statistic">
+                <div class="value">
+                    30
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    EL
+                </div>
+            </div>
+
+            <div class="ui statistic">
+                <div class="value">
+                    2
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    RH
+                </div>
+            </div>
+
+            <div class="ui statistic">
+                <div class="value">
+                    2
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    Sp. CL&ensp;
+                </div>
+            </div>
+
+            <div class="ui statistic">
+                <div class="value">
+                    60
+                </div>
+
+                <div class="label">
+                    <i class="plane icon"></i>
+                    VL
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
 <script type="text/javascript">
