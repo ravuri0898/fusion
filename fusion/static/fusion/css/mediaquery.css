@@ -1,0 +1,39 @@
+@media only screen and (width: 1280px) {
+    #body {
+        min-width: 149%;
+        min-height: 148.5%;
+        transform: scale(0.67);
+        transform-origin: 0 0;
+
+    }
+}
+
+@media only screen and (width: 1366px) {
+    #body {
+        min-width: 149%;
+        min-height: 148.5%;
+        transform: scale(0.67);
+        transform-origin: 0 0;
+
+    }
+}
+
+@media only screen and (width: 1440px) {
+    #body {
+        min-width: 149%;
+        min-height: 148.5%;
+        transform: scale(0.75);
+        transform-origin: 0 0;
+
+    }
+}
+
+@media only screen and (width: 1600px) {
+    #body {
+        min-width: 149%;
+        min-height: 148.5%;
+        transform: scale(0.80);
+        transform-origin: 0 0;
+
+    }
+}
