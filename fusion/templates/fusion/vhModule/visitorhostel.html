@@ -57,11 +57,240 @@
         {% comment %}
             The central-rail segment starts here!
         {% endcomment %}
-        <div class="eight wide column">
-            {% comment %}The Details start here!{% endcomment %}
-            <div class="ui active tab segment" data-tab="first">
+        <div class="ui container">
+    <div class="ui vertical stripe team segment"
+         style="padding-left: 3.5%;
+                padding-right: 3.5%;">
 
+        <div class="ui header">
+            visitor hostel form:
+        </div>
+
+        <div class="ui divider"></div>
+        <br>
+
+        <form class="ui large form">
+
+            {% comment %} The ApplyLeave conatianer starts here! {% endcomment %}
+            <div id="applyLeave">
+                {% comment %}The form row starts here!{% endcomment %}
+
+                 <div class="field">
+                 <div class="two fields">
+                    <div class="field">
+                        <label>Name </label>
+                        <input placeholder="name" type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>Organization</label>
+                        <input placeholder="organization" type="text">
+                    </div>
+                </div>
             </div>
+
+                 <div class="field">
+                 <div class="two fields">
+                    <div class="field">
+                        <label>phone </label>
+                        <input placeholder="Phone" type="number">
+                    </div>
+
+                    <div class="field">
+                        <label>Email</label>
+                        <input placeholder="email" type="email">
+                    </div>
+                </div>
+            </div>
+
+                  <div class="field">
+                 <div class="two fields">
+                    <div class="field">
+                        <label>Number of persons </label>
+                        <input placeholder="number of persons" type="number">
+                    </div>
+
+                    <div class="field">
+                        <label>purpose of visit</label>
+                        <input placeholder="description" type="text">
+                    </div>
+                </div>
+            </div>
+          <div class="fields">
+
+                        {% comment %}Academic Responsibilities start here!{% endcomment %}
+                        <div class="eight wide field">
+                            <label>Nationality:</label>
+                            <div class="ui fluid search selection dropdown">
+                                <input name="Select" type="hidden">
+                                <i class="dropdown icon"></i>
+
+                                <div class="default text">Select</div>
+
+                                <div class="menu">
+                                    <div class="item" data-value="india">
+                                        India
+                                    </div>
+
+                                    <div class="item" data-value="pakistan">
+                                        Pakistan
+                                    </div>
+                                    <div class="item" data-value="srilanka">
+                                        Srilanka
+                                    </div>
+                                    <div class="item" data-value="bangladesh">
+                                        Bangladesh
+                                    </div>
+                                    <div class="item" data-value="china">
+                                        China
+                                    </div>
+                                    <div class="item" data-value="dubai">
+                                        Dubai
+                                    </div>
+
+                                    <div class="item" data-value="nepal">
+                                        Nepal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %}Academic Responsibilities end here!{% endcomment %}
+
+                        {% comment %}Administrative Responsibilities start here!{% endcomment %}
+                        <div class="eight wide field">
+                            <label>No of rooms:</label>
+                            <div class="ui fluid search selection dropdown">
+                                <input name="Select" type="hidden">
+                                <i class="dropdown icon"></i>
+
+                                <div class="default text">Select</div>
+
+                                <div class="menu">
+                                    <div class="item" data-value="1">
+                                        1
+                                    </div>
+
+                                    <div class="item" data-value="2">
+                                        2
+                                    </div>
+                                    <div class="item" data-value="3">
+                                        3
+                                    </div>
+
+                                    <div class="item" data-value="4">
+                                       4
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        {% comment %}Number of rooms ends here!{% endcomment %}
+                    </div>
+                </div>
+                {% comment %}rooms and nationality ends here!{% endcomment %}
+<br>
+                     <div class="two fields">
+                    <div class="field">
+                        <label>Arrival date:</label>
+                        <div class="ui calendar" id="rangestart">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="From">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Departure date:</label>
+                        <div class="ui calendar" id="rangeend">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="twelve wide field">
+                        {% comment %}The Dropdown field starts here!{% endcomment %}
+                        <label>Leave Type</label>
+
+                        <div class="ui fluid search selection dropdown">
+                            <input name="Leave Type" type="hidden">
+                            <i class="dropdown icon"></i>
+
+                            <div class="default text">visit category</div>
+
+                            <div class="menu">
+                                <div class="item" data-value="A">
+                                    A
+                                </div>
+
+                                <div class="item" data-value="B">
+                                    B
+                                </div>
+
+                                <div class="item" data-value="C">
+                                    C
+                                </div>
+
+                                <div class="item" data-value="D">
+                                    D
+                                </div>
+
+
+                            </div>
+                        </div>
+                        {% comment %}The Dropdown field ends here!{% endcomment %}
+                    </div>
+
+
+
+                </div>
+
+                <div class="fields">
+                    <div class="sixteen wide field" id="leaveAddress" style="display: none;">
+                        <label>Leave Address:</label>
+                        <textarea class="ui textarea" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <div>
+
+                <br>
+
+                {% comment %}Leave Purpose starts here!{% endcomment %}
+                <div class="fields">
+                    <div class="twelve wide field">
+                        <label>Leave Purpose:</label>
+                        <div class="ui fluid input">
+                            <input name="leavePurpose">
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <div class="four wide field">
+                        <label><br></label>
+                        <div class="ui large fluid primary button">
+                            Submit
+                        </div>
+                    </div>
+                </div>
+                {% comment %}Leave Purpose ends here!{% endcomment %}
+                <br>
+            </div>
+        </form>
+    </div>
+
+    <div class="extra content">
+        <br>
+        <br>
+
+
+
+</div>
+
             {% comment %}The Personal Details end here!{% endcomment %}
 
 
