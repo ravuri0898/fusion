@@ -3,7 +3,7 @@
 
 
 {% block title %}
-    Placement
+    Module
 {% endblock %}
 
 
@@ -36,17 +36,12 @@
                  style="max-width: 320px;">
 
                 <a class="active item" data-tab="first">
-                    Profile
+                    Tab Content #1
                     <i class="right floated chevron right icon"></i>
                 </a>
 
                 <a class="item" data-tab="second">
-                    Skills & Technologies
-                    <i class="right floated chevron right icon"></i>
-                </a>
-
-                <a class="item" data-tab="third">
-                    Education
+                    Tab Content #2
                     <i class="right floated chevron right icon"></i>
                 </a>
             </div>
@@ -65,28 +60,16 @@
         <div class="eight wide column">
             {% comment %}The Details start here!{% endcomment %}
             <div class="ui active tab segment" data-tab="first">
-                {% block profile %}
-                    {% include 'fusion/placementModule/profile.html' %}
-                {% endblock %}
+
             </div>
             {% comment %}The Personal Details end here!{% endcomment %}
 
 
-            {% comment %}The Skills & Technologies start here!{% endcomment %}
+            {% comment %}The Publications starts here!{% endcomment %}
             <div class="ui tab segment" data-tab="second">
-                {% block skills %}
-                    {% include 'fusion/placementModule/skills.html' %}
-                {% endblock %}
-            </div>
-            {% comment %}The Skills & Technologies end here!{% endcomment %}
 
-            {% comment %}The Education tab starts here!{% endcomment %}
-            <div class="ui tab segment" data-tab="third">
-                {% block education %}
-                    {% include 'fusion/placementModule/education.html' %}
-                {% endblock %}
             </div>
-            {% comment %}The Education tab ends here!{% endcomment %}
+            {% comment %}The Publications ends here!{% endcomment %}
 
         </div>
         {% comment %}The central-rail segment ends here!{% endcomment %}
@@ -108,21 +91,5 @@
     {% comment %}The grid ends here!{% endcomment %}
 
 
-
-{% endblock %}
-
-{%  block javascript %}
-    <script type="text/javascript" src="{% static 'fusion/js/editProfile.js' %}"></script>
-    <script type="text/javascript" src="{% static 'fusion/js/checkbox.js' %}"></script>
-
-    <script>
-        function increment(){
-            $('#example1').progress('increment');
-        }
-
-        function decrement() {
-            $('#example1').progress('decrement');
-        }
-    </script>
 
 {% endblock %}

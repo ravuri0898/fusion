@@ -1,0 +1,92 @@
+{% block education %}
+    <div class="ui vertical segment">
+        <div class="ui header">
+            Education
+        </div>
+        <div class="ui divider"></div>
+
+        <div class="ui vertical segment">
+            <table class="ui definition table">
+                <tbody>
+                <tr>
+                    <td>
+
+                    </td>
+
+                    <td>
+                        <a>
+                            <i class="phone icon" id="contactIcon"></i>
+                            <span id="contactSpan">
+                                +91 - 89898 98989
+                            </span>
+                        </a>
+
+                        <div class="ui fluid input">
+                            <input type="text" id="contactInput" hidden>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        Mail
+                    </td>
+
+                    <td>
+                        <a href="" target="_blank">
+                            <i class="mail icon" id="mailIcon"></i>
+
+                            <span id="mailSpan">
+                                        {{ userEmail }}
+                                    </span>
+                        </a>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Facebook
+                    </td>
+
+                    <td>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="blue facebook icon"></i>
+                            {{ userFirstName }} {{ userLastName }}
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        LinkedIn
+                    </td>
+
+                    <td>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="blue linkedin icon"></i>
+                            {{ userFirstName }} {{ userLastName }}
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Github
+                    </td>
+
+                    <td>
+                        <a href="https://www.github.com/" target="_blank">
+                            <i class="teal github icon"></i>
+                            {{ userFirstName }} {{ userLastName }}
+                        </a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}

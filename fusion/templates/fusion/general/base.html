@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'fusion/semantic-ui/components/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'fusion/semantic-ui/components/icon.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'fusion/css/semantic.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fusion/css/mediaquery.css' %}">
 
     {% block css %}
     {% endblock %}
@@ -17,7 +18,7 @@
 </head>
 
 {% comment %}style="background-color: rgba(189, 189, 189, 0.1);"{% endcomment %}
-<body>
+<body id="body">
 
 {% block body %}
     {% block navBar %}
