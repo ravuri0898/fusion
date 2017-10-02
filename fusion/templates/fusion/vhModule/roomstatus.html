@@ -1,9 +1,14 @@
 {% load static %}
 
+ <div class="ui container">
+            <div class="ui vertical stripe team segment"
+                 style="padding-left: 3.5%;
+                padding-right: 3.5%;">
 {% block leavestatus %}
     <div class="ui header">
-        Leave Status:
+        Room Booking Status:
     </div>
+             <div id="checkout">
 
     <div class="content">
         <div class="description">
@@ -17,23 +22,19 @@
                 <thead>
                 <tr>
                     <th>
-                        Employee
+                        Name
                     </th>
 
                     <th>
-                        Type
+                        Number Of Rooms
                     </th>
 
                     <th>
-                        From
+                        Arrival Date:
                     </th>
 
                     <th>
-                        To
-                    </th>
-
-                    <th>
-                        Duration
+                        Number of Persons
                     </th>
 
                     <th>
@@ -65,15 +66,11 @@
                         </td>
 
                         <td>
-                            22 Sept'17
+                            22 oct'17
                         </td>
 
                         <td>
-                            22 Sept'17
-                        </td>
-
-                        <td>
-                            1
+                            2
                         </td>
 
                         <td>
@@ -94,6 +91,7 @@
             <i class="large red x icon"></i> : Declined
         </div>
     </div>
-
+            </div>
+ </div>
+ </div>
 {% endblock %}
-

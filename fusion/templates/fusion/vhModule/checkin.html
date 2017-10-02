@@ -1,0 +1,120 @@
+{% load static %}
+
+<div class="ui container">
+        <div class="ui vertical stripe team segment"
+             style="padding-left: 3.5%;
+                padding-right: 3.5%;">
+
+            <div class="ui header">
+                Check In form:
+            </div>
+
+            <div class="ui divider"></div>
+            <br>
+
+            <form class="ui large form">
+
+                {% comment %} The visitor room form conatianer starts here! {% endcomment %}
+                <div id="checkin">
+                    {% comment %}The form row starts here!{% endcomment %}
+
+                    <div class="field">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Name </label>
+                                <input placeholder="name" type="text">
+                            </div>
+
+                            <div class="field">
+                                <label>Email</label>
+                                <input placeholder="organization" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sixteen wide field">
+                        <label>Address:</label>
+                        <div class="ui fluid input">
+                            <textarea class="ui textarea" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Phone: </label>
+                                <input placeholder="Phone" type="number">
+                            </div>
+
+                            <div class="field">
+                                <label>No Of Persons</label>
+                                <input placeholder="email" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Arrival Date:</label>
+                            <div class="ui calendar" id="rangestart">
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="From">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>Arrival Time:</label>
+                            <input placeholder="time" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class=" eight column field">
+            {% comment %}number of rooms  starts here!{% endcomment %}
+                    <label>No Of Rooms:</label>
+                    <div class="ui fluid search selection dropdown">
+                        <input name="Select" type="hidden">
+                        <i class="dropdown icon"></i>
+
+                        <div class="default text">Select</div>
+
+                        <div class="menu">
+                            <div class="item" data-value="1">
+                                1
+                            </div>
+
+                            <div class="item" data-value="2">
+                                2
+                            </div>
+                            <div class="item" data-value="3">
+                                3
+                            </div>
+
+                            <div class="item" data-value="4">
+                                4
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% comment %}number of rooms  ends here!{% endcomment %}
+
+                <br>
+
+                <div class="fields">
+
+
+
+                    <br>
+                    <div class="four wide field">
+                        <label><br></label>
+                        <div class="ui large fluid primary button">
+                            Submit
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+        </div>
+        </form>
+    </div>
+    </div>
+{% endblock %}
