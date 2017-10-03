@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from fusion.forms import *
-from fusion.models import *
-
+from .forms import *
+from .forms import *
+from .models import *
 
 loginform = LoginForm()
 

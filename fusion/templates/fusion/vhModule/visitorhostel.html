@@ -1,11 +1,9 @@
 {% extends 'fusion/../fusion/general/base.html' %}
 {% load static %}
 
-
 {% block title %}
-Vistor Hostel
+Vistor's Hostel
 {% endblock %}
-
 
 {% block body %}
 {% block navBar %}
@@ -44,11 +42,13 @@ Vistor Hostel
                 Status
                 <i class="right floated chevron right icon"></i>
             </a>
-            <a class="active item" data-tab="third">
+
+            <a class="item" data-tab="third">
                 Check In
                 <i class="right floated chevron right icon"></i>
             </a>
-            <a class="active item" data-tab="fourth">
+
+            <a class="item" data-tab="fourth">
                 Check Out
                 <i class="right floated chevron right icon"></i>
             </a>
@@ -67,43 +67,38 @@ Vistor Hostel
     {% endcomment %}
     <div class="ui active tab segment" data-tab="first">
         {% block bookaroom %}
-                        {% include 'fusion/vhModule/bookaroom.html' %}
-                    {% endblock %}
+        {% include 'fusion/vhModule/bookaroom.html' %}
+        {% endblock %}
 
 
     </div>
 
 
-{% comment %}The Personal Details end here!{% endcomment %}
-{% comment %}The status starts here!{% endcomment %}
-<div class="ui tab segment" data-tab="second">
-{% block roomstatus %}
-                        {% include 'fusion/vhModule/roomstatus.html' %}
-                    {% endblock %}
+    {% comment %}The Personal Details end here!{% endcomment %}
+    {% comment %}The status starts here!{% endcomment %}
+    <div class="ui tab segment" data-tab="second">
+        {% block roomstatus %}
+        {% include 'fusion/vhModule/roomstatus.html' %}
+        {% endblock %}
+    </div>
 
-</div>
-{% comment %}The status starts here!{% endcomment %}
-{% comment %}The check in form starts here!{% endcomment %}
-<div class="ui tab segment" data-tab="third">
-    {% block checkin %}
-                        {% include 'fusion/vhModule/checkin.html' %}
-                    {% endblock %}
-
-</div>
-
-</div>
-
+    {% comment %}The status starts here!{% endcomment %}
+    {% comment %}The check in form starts here!{% endcomment %}
+    <div class="ui tab segment" data-tab="third">
+        {% block checkin %}
+        {% include 'fusion/vhModule/checkin.html' %}
+        {% endblock %}
+    </div>
 
     {% comment %}The check in ends here!{% endcomment %}
 
     {% comment %}The checkout form starts here!{% endcomment %}
-<div class="ui tab segment" data-tab="fourth">
-     {% block checkout %}
-                        {% include 'fusion/vhmoduleModule/checkout.html' %}
-                    {% endblock %}
-</div>
-{% comment %}The checkout form ends here!{% endcomment %}
-
+    <div class="ui tab segment" data-tab="fourth">
+        {% block checkout %}
+        {% include 'fusion/vhModule/checkout.html' %}
+        {% endblock %}
+    </div>
+    {% comment %}The checkout form ends here!{% endcomment %}
 
     {% comment %}The central-rail segment ends here!{% endcomment %}
 
@@ -120,9 +115,6 @@ Vistor Hostel
     {% comment %}The right-margin segment!{% endcomment %}
     <div class="column"></div>
 
-
     {% comment %}The grid ends here!{% endcomment %}
-
-
-
-    {% endblock %}
+</div>
+{% endblock %}
