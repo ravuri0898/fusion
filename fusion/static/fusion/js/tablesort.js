@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $('table').tablesort();
+});
+
 (function($) {
     $.tablesort = function ($table, settings) {
         var self = this;
