@@ -22,6 +22,9 @@ urlpatterns = [
     # fusion/profile/<pk>/
     url(r'^profile/(?P<emp_id>[0-9]+)$', views.profile, name='profile'),
 
+    # fusion/phc/<pk>/
+    url(r'^phc/(?P<emp_id>[0-9]+)$', views.phc, name='phc'),
+
     # fusion/dashboard/<pk>/
     url(r'^dashboard/(?P<emp_id>[0-9]+)$', views.dashboard, name='dashboard'),
 

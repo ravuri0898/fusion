@@ -158,5 +158,26 @@ def placement(request, emp_id):
     return render(request, 'fusion/placementModule/placement.html', context)
 
 
+def phc(request, emp_id):
+    employeePK = emp_id
+    dbUser = get_object_or_404(Employee, pk=employeePK)
+    userFirstName = str(dbUser.empFirstName)
+    userLastName = str(dbUser.empLastName)
+    userEmail = str(dbUser.empEmail)
+    userDepartment = str(dbUser.empDepartment)
+    userDesignation = str(dbUser.empDesignation)
+
+    context = {'employeePK': employeePK,
+               'userFirstName': userFirstName,
+               'userLastName': userLastName,
+               'userEmail': userEmail,
+               'userDesignation': userDesignation,
+               'userDepartment': userDepartment,
+               'loginform': loginform,
+               }
+
+    return render(request, 'fusion/phcModule/phc.html', context)
+
+
 def temp(request):
     return render(request, 'fusion/general/base.html', {})
