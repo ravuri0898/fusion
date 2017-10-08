@@ -15,10 +15,82 @@
 {% comment %}The consumable segment starts here!{% endcomment %}
 <div class="ui active tab segment" data-tab="consumable">
 
-        <form class="ui form">
 
-        </form>
-</div>
+
+
+            <table class="ui very basic collapsing celled large sortable table"
+                   style="padding-left: 2.5%;
+                                                          padding-right: 2.5%;
+                                                          padding-top: 1%;
+                                                          padding-bottom: 1.5%;
+                                                          margin: auto;">
+                <thead>
+                <tr>
+                    <th>
+                       Item name
+                    </th>
+
+                    <th>
+                         Opening Balance:
+                    </th>
+
+                    <th>
+                         Issued
+                    </th>
+                    <th>
+                        Closing Balance:
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Remarks
+                    </th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            Item name from DB
+                        </td>
+                        <td>
+                            Opening From DB
+                        </td>
+                        <td>
+                              <div class="field">
+                            <input placeholder="amount" type="number">
+                        </div>
+                        </td>
+
+                        <td>
+                           <div class="field">
+                            <input placeholder="amount" type="number">
+                        </div>
+                        </td>
+                        <td>
+                          Issued + Closing
+                        </td>
+                        <td>
+                           <div class="field">
+                      <div class="ui fluid input">
+                        <textarea class="ui textarea" rows="2" placeholder="remarks"></textarea>
+                      </div>
+                           </div>
+                        </td>
+
+
+
+
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
 
 {% comment %}The consumable segment ends here!{% endcomment %}
 
@@ -26,7 +98,105 @@
 <div class="ui active tab segment" data-tab="nonconsumable">
 
         <form class="ui form">
+          <table class="ui very basic collapsing celled large sortable table"
+                   style="padding-left: 2.5%;
+                                                          padding-right: 2.5%;
+                                                          padding-top: 1%;
+                                                          padding-bottom: 1.5%;
+                                                          margin: auto;">
+                <thead>
+                <tr>
+                    <th>
+                       Item name
+                    </th>
 
+                     <th>
+                      Opening Balance
+                     </th>
+
+                    <th>
+                     Total
+                     </th>
+
+                     <th>
+                       Addition During F/N
+                    </th>
+
+                    <th>
+                         In Use
+                    </th>
+
+                    <th>
+                         Servicable
+                    </th>
+                    <th>
+                        UnServicable
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Remarks
+                    </th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            Item name from DB
+                        </td>
+                        <td>
+                             From DB
+                        </td>
+
+                        <td>
+                             From DB
+                        </td>
+                         <td>
+                             From DB
+                        </td>
+
+                        <td>
+                              <div class="field">
+                            <input placeholder="" type="number">
+                        </div>
+                        </td>
+
+                        <td>
+                           <div class="field">
+                            <input placeholder="" type="number">
+                        </div>
+                        </td>
+
+                        <td>
+                           <div class="field">
+                            <input placeholder="" type="number">
+                        </div>
+                        </td>
+
+                        <td>
+                        Servicable+Inuse+Unservicable
+                        </td>
+                        <td>
+                           <div class="field">
+                      <div class="ui fluid input">
+                        <textarea class="ui textarea" rows="2" placeholder="remarks"></textarea>
+                      </div>
+                           </div>
+                        </td>
+
+
+
+
+
+                    </tr>
+
+
+                </tbody>
+            </table>
         </form>
 </div>
 

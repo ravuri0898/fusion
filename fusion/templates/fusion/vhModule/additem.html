@@ -1,0 +1,75 @@
+{% load static %}
+{% block additem %}
+<div class="ui container">
+    <div class="ui vertical stripe team segment"
+         style="padding-left: 3.5%;
+                padding-right: 3.5%;">
+
+        <div class="ui header">
+            Add Items:
+        </div>
+
+        <div class="ui divider"></div>
+        <br>
+
+        <form class="ui large form">
+
+            {% comment %} The add items form  starts here! {% endcomment %}
+            <div id="additem">
+                 <div class="field">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Item Name: </label>
+                            <input placeholder="Iname" type="text">
+                        </div>
+
+                        <div class="field">
+                            <label>Quantity</label>
+                            <input placeholder="quantity" type="number">
+                        </div>
+                    </div>
+                </div>
+                 <div class="field">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Amount: </label>
+                            <input placeholder="amount" type="number">
+                        </div>
+
+                        <div class="field">
+                           <label>Date:</label>
+                        <div class="ui calendar" id="addingdate">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="date">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+               <br>
+                <div class="four wide field">
+                    <label><br></label>
+                    <div class="ui large fluid primary button">
+                        Submit
+
+                    </div>
+                </div>
+
+                <div class="ui yellow large icon button" onclick="addInput()">
+        <i class="cart icon"></i>
+        Add Item
+    </div>
+
+    <div class="ui divider"></div>
+    <div id="addInputDiv"></div>
+
+            </div>
+             {% comment %} The add items form  ends here! {% endcomment %}
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript" src="{% static 'js/addInput.js' %}"></script>
+{% endblock %}
