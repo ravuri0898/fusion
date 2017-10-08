@@ -1,0 +1,34 @@
+{% load static %}
+{% block updateinventory %}
+  {% comment %}The tab menu starts here!{% endcomment %}
+<div class="ui pointing secondary menu">
+        <a class="active item" data-tab="consumable">
+           Consumable
+        </a>
+
+        <a class="item" data-tab="nonconsumable">
+            Non-Consumable
+        </a>
+</div>
+  {% comment %}The tab menu ends here!{% endcomment %}
+
+{% comment %}The consumable segment starts here!{% endcomment %}
+<div class="ui active tab segment" data-tab="consumable">
+
+        <form class="ui form">
+
+        </form>
+</div>
+
+{% comment %}The consumable segment ends here!{% endcomment %}
+
+{% comment %}The non consumable segment starts here!{% endcomment %}
+<div class="ui active tab segment" data-tab="nonconsumable">
+
+        <form class="ui form">
+
+        </form>
+</div>
+
+{% comment %}The non consumable segment ends here!{% endcomment %}
+{% endblock %}

@@ -92,14 +92,20 @@
                 </div>
                 {% comment %}The complaint/feedback ends here!{% endcomment %}
 
-                {% comment %}The complaint/feedback starts here!{% endcomment %}
-                <div class="ui tab segment" data-tab="third">
-                    {% block feedback %}
-                        {% include 'fusion/phcmodule/feedback.html' %}
+                {% comment %}The appointment approval tab starts here!{% endcomment %}
+                <div class="ui tab segment" data-tab="fourth">
+                    {% block comapproval %}
+                        {% include 'fusion/phcmodule/comapproval.html' %}
                     {% endblock %}
                 </div>
-                {% comment %}The complaint/feedback ends here!{% endcomment %}
-
+                {% comment %}The appointment approval tab ends here!{% endcomment %}
+                {% comment %}The compounder prescription tab starts here!{% endcomment %}
+                <div class="ui tab segment" data-tab="fifth">
+                    {% block comp_prescription %}
+                        {% include 'fusion/phcmodule/comp_prescription.html' %}
+                    {% endblock %}
+                </div>
+                {% comment %}The appointment approval tab ends here!{% endcomment %}
 
             </div>
         </div>

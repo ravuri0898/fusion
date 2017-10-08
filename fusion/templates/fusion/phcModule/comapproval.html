@@ -3,108 +3,103 @@
 {% block comapproval %}
 {% comment %}the compounder approval tab starts here {% endcomment %}
  <div class="ui fluid card">
-  <form class="ui form">
-            <div class="field">
-                <div class="two fields">
-                    <div class="field">
-                        <label>Author</label>
-                        <input placeholder="Author" type="text">
-                    </div>
+    <form class="ui form">
+        <div class="ui header">
+        Leave Status:
+    </div>
 
-                    <div class="field">
-                        <label>Upload Journal</label>
-                        <input placeholder="Journal" type="file">
-                    </div>
-                </div>
-            </div>
+    <div class="content">
+        <div class="description">
 
-            <div class="field">
-                <label>Conference</label>
-                <div class="fields">
-                    <div class="eight wide field">
-                        <input placeholder="Conference" type="text">
-                    </div>
+            <table class="ui very basic collapsing celled large sortable table"
+                   style="padding-left: 2.5%;
+                                                          padding-right: 2.5%;
+                                                          padding-top: 1%;
+                                                          padding-bottom: 1.5%;
+                                                          margin: auto;">
+                <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
 
-                    <div class="four wide field">
-                        <input placeholder="Place" type="text">
-                    </div>
+                    <th>
+                        Roll Number
+                    </th>
 
-                    <div class="four wide field">
-                        <div class="ui fluid search selection dropdown">
-                            <input type="hidden">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Select Year</div>
-                            <div class="menu">
-                                <div class="item" data-value="2017">2017</div>
-                                <div class="item" data-value="2016">2016</div>
-                                <div class="item" data-value="2015">2015</div>
-                                <div class="item" data-value="2014">2014</div>
-                                <div class="item" data-value="2013">2013</div>
-                                <div class="item" data-value="2012">2012</div>
-                                <div class="item" data-value="2011">2011</div>
-                                <div class="item" data-value="2010">2010</div>
-                                <div class="item" data-value="2009">2009</div>
-                                <div class="item" data-value="2008">2008</div>
-                                <div class="item" data-value="2007">2007</div>
-                                <div class="item" data-value="2006">2006</div>
-                                <div class="item" data-value="2005">2005</div>
-                                <div class="item" data-value="2004">2004</div>
-                                <div class="item" data-value="2003">2003</div>
-                                <div class="item" data-value="2002">2002</div>
-                                <div class="item" data-value="2001">2001</div>
-                                <div class="item" data-value="2000">2000</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <th>
+                        Doctor
+                    </th>
+                     <th>
+                         Date of Appointment
+                    </th>
+                    <th>
+                         Disease
+                    </th>
 
-                <div class="fields">
-                    <div class="fourteen wide field">
-                        <div class="field">
-                            <label>Title</label>
-                            <input placeholder="Title" type="text">
-                        </div>
-                    </div>
+                     <th>
+                        Accept
+                    </th>
 
-                    <div class="two wide field">
-                        <label><br></label>
-                        <div class="ui primary button">
-                            Save
-                            <i class="ui save icon right floated"></i>
-                        </div>
-                    </div>
-                </div><div class="two wide field">
-                        <label><br></label>
-                        <div class="ui primary button">
-                            Save
-                            <i class="ui save icon right floated"></i>
-                        </div>
-                    </div>
-                </div>
+                    <th>
+                       Decline
+                    </th>
 
-               <div class="ui accordion field">
-                    <div class="title">
-                        <i class="icon dropdown"></i>
-                       Additional Details:
-                    </div>
-                    <div class="content fields">
-                        <div class="field">
-                            <label>description</label>
-                             <div class="ui fluid input">
-                        <textarea class="ui textarea" rows="2"></textarea>
-                      </div>
-                        </div>
+                </tr>
+                </thead>
 
-                        <div class="field" style="padding-top: 8px;">
-                            <label>Doctor</label>
-                            <input placeholder="required specialist " type="text">
-                        </div>
-                    </div>
-                </div>
+                <tbody>
 
-            </div>
-        </form>
- </div>
+                {% for leave in leave_type %}
+
+                    <tr>
+                        <td>
+                            <h4 class="ui image header">
+                                <img src="{% static 'fusion/img/user.png' %}" class="ui mini rounded image">
+                                <div class="content">
+                                    {{ userFirstName }}
+                                    {{ userLastName }}
+                                    <div class="sub header">
+                                        {{ userDesignation }}
+                                    </div>
+                                </div>
+                            </h4>
+                        </td>
+
+                        <td>
+                            {{ leave }}
+                        </td>
+
+                        <td>
+                            22 Sept'17
+                        </td>
+
+                        <td>
+                            22 Sept'17
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            <i class="large green checkmark icon"></i>
+                        </td>
+
+
+                        <td>
+                               <i class="large red remove icon"></i>
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+</div>
 
 {% comment %}the compounder approval tab ends here {% endcomment %}
 {% endblock %}

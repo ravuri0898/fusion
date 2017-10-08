@@ -1,10 +1,9 @@
 {% load static %}
-{% block roomstatus %
+{% block roomstatus %}
  <div class="ui container">
             <div class="ui vertical stripe team segment"
                  style="padding-left: 3.5%;
                 padding-right: 3.5%;">
-{% block leavestatus %}
     <div class="ui header">
         Room Booking Status:
     </div>
@@ -26,26 +25,28 @@
                     </th>
 
                     <th>
-                        Number Of Rooms
+                         Arrival Date:
                     </th>
 
                     <th>
-                        Arrival Date:
+                         Departure Date:
                     </th>
-
                     <th>
                         Number of Persons
                     </th>
-
                     <th>
-                        Status
+                        Payment Status
+                    </th>
+                    <th>
+                        Booking Status
+                    </th>
+                    <th>
+                        Cancel Booking
                     </th>
                 </tr>
                 </thead>
 
                 <tbody>
-
-                {% for leave in leave_type %}
 
                     <tr>
                         <td>
@@ -62,36 +63,65 @@
                         </td>
 
                         <td>
-                            {{ leave }}
+                            2 oct'17
                         </td>
 
                         <td>
-                            22 oct'17
+                            12 oct'17
                         </td>
 
                         <td>
                             2
                         </td>
-
+                        <td>
+                            Pending
+                        </td>
                         <td>
                             <i class="large green checkmark icon"></i>
                         </td>
+                        <td>
+                             <a class="item" onclick="modal();">
+                         <button class="ui button">
+                          Cancel
+                          </button>
+                            </a>
+<div class="ui basic modal">
+  <div class="ui icon header">
+    <i class="archive icon"></i>
+     Cancel booking
+  </div>
+  <div class="content">
+    <p>Are you sure you want to Cancel this Booking?</p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic ok inverted   button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div class="ui green  cancel inverted button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>
+
+                        </td>
                     </tr>
 
-                {% endfor %}
+
                 </tbody>
             </table>
         </div>
     </div>
 
-    <div class="extra content">
-        <div class="" style="text-align: center;">
-            <i class="large green checkmark icon"></i> : Approved &ensp;&ensp;&ensp;&ensp;&ensp;
-            <i class="large orange warning icon"></i> : Pending &ensp;&ensp;&ensp;&ensp;&ensp;
-            <i class="large red x icon"></i> : Declined
-        </div>
-    </div>
-            </div>
  </div>
  </div>
+ </div>
+<script>
+    $('.ui.basic.modal')
+  .modal('show')
+;
+</script>
+
 {% endblock %}
+
