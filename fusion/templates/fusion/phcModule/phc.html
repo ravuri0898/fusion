@@ -13,129 +13,150 @@
     {% endblock %}
 
     {% comment %}The grid starts here!{% endcomment %}
-    <div class="ui stackable doubling grid">
+<div class="ui stackable doubling grid">
 
-        {% comment %}The left-margin segment!{% endcomment %}
-        <div class="column"></div>
+    {% comment %}The left-margin segment!{% endcomment %}
+    <div class="column"></div>
 
-        {% comment %}The left-rail segment starts here!{% endcomment %}
-        <div class="three wide column">
+    {% comment %}The left-rail segment starts here!{% endcomment %}
+    <div class="three wide column">
 
-            {% comment %}ROW #1 starts here!{% endcomment %}
-            <div class="row">
-                {% comment %}The Employee Image Card starts here!{% endcomment %}
-                {% block userCard %}
-                    {% include 'fusion/general/usercard.html' %}
-                {% endblock %}
-                {% comment %}The Employee Image Card ends here!{% endcomment %}
-            </div>
-            {% comment %}ROW #1 ends here!{% endcomment %}
+        {% comment %}ROW #1 starts here!{% endcomment %}
+        <div class="row">
+            {% comment %}The Employee Image Card starts here!{% endcomment %}
+            {% block userCard %}
+            {% include 'fusion/general/usercard.html' %}
+            {% endblock %}
+            {% comment %}The Employee Image Card ends here!{% endcomment %}
+        </div>
+        {% comment %}ROW #1 ends here!{% endcomment %}
 
-            <div class="ui divider"></div>
+        <div class="ui divider"></div>
 
-            {% comment %}ROW #2 starts here!{% endcomment %}
-            <div class="row">
-                {% comment %}The Tab-Menu starts here!{% endcomment %}
-                <div class="ui huge fluid vertical pointing menu"
-                     style="min-width: 240px;
+        {% comment %}ROW #2 starts here!{% endcomment %}
+        <div class="row">
+            {% comment %}The Tab-Menu starts here!{% endcomment %}
+            <div class="ui huge fluid vertical pointing menu"
+                 style="min-width: 240px;
                             max-width: 320px;">
-                    <a class="active item" data-tab="first">
-                        Appointments
-                        <i class="right floated chevron right icon"></i>
-                    </a>
+                <a class="active item" data-tab="first">
+                    Appointments
+                    <i class="right floated chevron right icon"></i>
+                </a>
 
-                    <a class="item" data-tab="second">
-                        History
-                        <i class="right floated chevron right icon"></i>
-                    </a>
+                <a class="item" data-tab="second">
+                    History
+                    <i class="right floated chevron right icon"></i>
+                </a>
 
-                    <a class="item" data-tab="third">
-                        Complaints/Feedback
-                        <i class="right floated chevron right icon"></i>
-                    </a>
-
-                </div>
-                {% comment %}The Tab-Menu ends here!{% endcomment %}
-
+                <a class="item" data-tab="third">
+                    Complaints/Feedback
+                    <i class="right floated chevron right icon"></i>
+                </a>
+                <a class="item" data-tab="fourth">
+                    Compounder approval
+                    <i class="right floated chevron right icon"></i>
+                </a>
+                <a class="item" data-tab="fifth">
+                    Compounder Prescription
+                    <i class="right floated chevron right icon"></i>
+                </a>
+                <a class="item" data-tab="sixth">
+                    View Schedule
+                    <i class="right floated chevron right icon"></i>
+                </a>
             </div>
-            {% comment %}ROW #2 ends here!{% endcomment %}
+            {% comment %}The Tab-Menu ends here!{% endcomment %}
 
         </div>
-        {% comment %}The left-rail segment ends here!{% endcomment %}
-
-        {% comment %}The central-rail segment starts here!{% endcomment %}
-        <div class="eight wide column">
-            <div class="row">
-
-                {% comment %}The Appointments Form starts here!{% endcomment %}
-                <div class="ui active tab segment" data-tab="first">
-                    {% block appointment %}
-                        {% include 'fusion/phcmodule/appointment.html' %}
-                    {% endblock %}
-                </div>
-                {% comment %}The appointment Form ends here!{% endcomment %}
-
-                {% comment %}The patient history starts here!{% endcomment %}
-                <div class="ui tab segment" data-tab="second">
-                    {% block history %}
-                        {% include 'fusion/phcodule/history.html' %}
-                    {% endblock %}
-                </div>
-                {% comment %}The patient history ends here!{% endcomment %}
-
-
-                {% comment %}The complaint/feedback starts here!{% endcomment %}
-                <div class="ui tab segment" data-tab="third">
-                    {% block feedback %}
-                        {% include 'fusion/phcmodule/feedback.html' %}
-                    {% endblock %}
-                </div>
-                {% comment %}The complaint/feedback ends here!{% endcomment %}
-
-                {% comment %}The appointment approval tab starts here!{% endcomment %}
-                <div class="ui tab segment" data-tab="fourth">
-                    {% block comapproval %}
-                        {% include 'fusion/phcmodule/comapproval.html' %}
-                    {% endblock %}
-                </div>
-                {% comment %}The appointment approval tab ends here!{% endcomment %}
-                {% comment %}The compounder prescription tab starts here!{% endcomment %}
-                <div class="ui tab segment" data-tab="fifth">
-                    {% block comp_prescription %}
-                        {% include 'fusion/phcmodule/comp_prescription.html' %}
-                    {% endblock %}
-                </div>
-                {% comment %}The appointment approval tab ends here!{% endcomment %}
-
-            </div>
-        </div>
-        {% comment %}The central-rail segment ends here!{% endcomment %}
-
-        {% comment %}The right-rail segment starts here!{% endcomment %}
-        <div class="three wide column">
-            <div class="ui row">
-                <div id="textSegmentDiv">
-                    <div class="ui active large text loader"
-                         id="loader">
-                        Loading ...
-                    </div>
-
-                    <div id="textLoader" style="max-height: 87.5vh; overflow-y: auto; overflow-x: hidden;">
-                        {% block replacement %}
-                            {% include 'fusion/leaveModule/replacementrequest.html' %}
-                        {%  endblock %}
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        {% comment %}The right-rail segment ends here!{% endcomment %}
-
-        {% comment %}The right-margin segment!{% endcomment %}
-        <div class="column"></div>
+        {% comment %}ROW #2 ends here!{% endcomment %}
 
     </div>
-    {% comment %}The grid ends here!{% endcomment %}
+    {% comment %}The left-rail segment ends here!{% endcomment %}
+
+    {% comment %}The central-rail segment starts here!{% endcomment %}
+    <div class="eight wide column">
+        <div class="row">
+
+            {% comment %}The Appointments Form starts here!{% endcomment %}
+            <div class="ui active tab segment" data-tab="first">
+                {% block appointment %}
+                {% include 'fusion/phcmodule/appointment.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The appointment Form ends here!{% endcomment %}
+
+            {% comment %}The patient history starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="second">
+                {% block history %}
+                {% include 'fusion/phcodule/history.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The patient history ends here!{% endcomment %}
+
+
+            {% comment %}The complaint/feedback starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="third">
+                {% block feedback %}
+                {% include 'fusion/phcmodule/feedback.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The complaint/feedback ends here!{% endcomment %}
+
+            {% comment %}The appointment approval tab starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="fourth">
+                {% block comapproval %}
+                {% include 'fusion/phcmodule/comapproval.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The appointment approval tab ends here!{% endcomment %}
+
+            {% comment %}The compounder prescription tab starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="fifth">
+                {% block comp_prescription %}
+                {% include 'fusion/phcmodule/comp_prescription.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The appointment approval tab ends here!{% endcomment %}
+
+            {% comment %}The view schedule tab starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="sixth">
+                {% block viewschedule %}
+                {% include 'fusion/phcmodule/viewschedule.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The view schedule tab ends here!{% endcomment %}
+        </div>
+    </div>
+    {% comment %}The central-rail segment ends here!{% endcomment %}
+
+    {% comment %}The right-rail segment starts here!{% endcomment %}
+    <div class="three wide column">
+        <div class="ui row">
+            <div id="textSegmentDiv">
+                <div class="ui active large text loader"
+                     id="loader">
+                    Loading ...
+                </div>
+
+                <div id="textLoader" style="max-height: 87.5vh; overflow-y: auto; overflow-x: hidden;">
+                    {% block replacement %}
+                    {% include 'fusion/leaveModule/replacementrequest.html' %}
+                    {% endblock %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% comment %}The right-rail segment ends here!{% endcomment %}
+
+</div>
+<div class="ui stackable doubling grid">
+    {% comment %}The right-margin segment!{% endcomment %}
+    <div class="column"></div>
+
+</div>
+{% comment %}The grid ends here!{% endcomment %}
 
 {% endblock %}
 
